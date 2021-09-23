@@ -1,0 +1,5 @@
+{
+  // ========== Self-hosted PrizmDoc Server ==========
+  "prizmDocServerUrl": "http://localhost:18681",
+  //"packageIdSalt": "YOUR_UNIQUE_SALT"
+}

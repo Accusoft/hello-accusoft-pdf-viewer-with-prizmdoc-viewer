@@ -1,0 +1,21 @@
+{
+  "name": "hello-accusoft-pdf-viewer-with-prizmdoc-viewer",
+  "version": "1.0.0",
+  "description": "A minimal React application which integrates Accusoft PDF Viewer with PrizmDoc Viewer. Node.js is used for an example application server.",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm-run-all installClient installServer",
+    "installClient": "cd client && npm install",
+    "installServer": "cd server && npm install",
+    "buildClient": "cd client && npm run build",
+    "startClientDevServer": "cd client && npm start",
+    "prestartServer": "npm run buildClient",
+    "startServer": "cd server && npm start",
+    "start": "npm run startServer"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

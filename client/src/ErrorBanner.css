@@ -1,0 +1,22 @@
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+.error h2 {
+  margin: 0;
+}
+
+.error pre {
+  margin-left: 1em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.error code {
+  background-color: unset;
+  font-weight: bold;
+}

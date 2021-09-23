@@ -1,0 +1,33 @@
+.badge {
+  padding: 1px 7px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin-left: 0.5em;
+  font-size: 13px;
+  display: inline-block;
+  width: 40px;
+}
+
+.badge.processing {
+  background-color: darkorange;
+  width: 64px;
+}
+
+.badge.ready {
+  background-color: green;
+}
+
+.badge.error {
+  background-color: darkred;
+}
+
+.documents-list li button {
+  margin-left: 0.5em;
+  border-radius: 3px;
+  border: 1px solid darkgray;
+}
+
+.documents-list li button:hover {
+  background-color: darkgray;
+}

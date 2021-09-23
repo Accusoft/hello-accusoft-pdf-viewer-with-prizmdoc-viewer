@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "prestart": "node check-node-version.js",
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "base64url": "^3.0.1",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "json5": "^2.2.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.1",
+    "semver": "^5.7.1"
+  }
+}
