@@ -43,7 +43,7 @@ router.post('/viewingPackages/:document', async (req, res, next) => {
     const { fileId, affinityToken } = await workFileResponse.json();
 
     // 2. Start new Viewing Package Creator
-    const creatorResponse = await fetch('/v3/viewingPackageCreators', { // See https://help.accusoft.com/PrizmDoc/preview/HTML/v3-viewing-package-creators.html#post-v3viewingpackagecreators
+    const creatorResponse = await fetch('/v3/viewingPackageCreators', { // See https://help.accusoft.com/PrizmDoc/latest/HTML/v3-viewing-package-creators.html#post-v3viewingpackagecreators
       method: 'POST',
       headers: extendWithAffinity({ 
         'Content-Type': 'application/json'
@@ -110,7 +110,7 @@ router.get('/viewingPackages/:document', async (req, res, next) => {
     }
 
     // Request Viewing Package state from PrizmDoc Server.
-    const stateResponse = await fetch(`/v3/viewingPackages/${packageId}`); // See https://help.accusoft.com/PrizmDoc/preview/HTML/v3-viewing-packages.html#get-v3viewingpackagespackageid
+    const stateResponse = await fetch(`/v3/viewingPackages/${packageId}`); // See https://help.accusoft.com/PrizmDoc/latest/HTML/v3-viewing-packages.html#get-v3viewingpackagespackageid
     if (stateResponse.status === 200) {
       res.send({ state: 'complete' });
     } else if (stateResponse.status === 404) {
@@ -128,7 +128,7 @@ router.get('/viewingPackages/:document', async (req, res, next) => {
 router.get('/viewingPackages/:document/content/pdf', async (req, res, next) => {
   try {
     const packageId = getPackageIdForDocument(req.params.document);
-    const contentResponse = await fetch(`/v3/viewingPackages/${packageId}/content/pdf`); // See https://help.accusoft.com/PrizmDoc/preview/HTML/v3-viewing-packages.html#get-v3viewingpackagespackageidcontentpdf
+    const contentResponse = await fetch(`/v3/viewingPackages/${packageId}/content/pdf`); // See https://help.accusoft.com/PrizmDoc/latest/HTML/v3-viewing-packages.html#get-v3viewingpackagespackageidcontentpdf
     if (contentResponse.status === 200) {
       res.set('content-type', 'application/pdf');
       contentResponse.body.pipe(res);
@@ -151,7 +151,7 @@ const pollViewingPackageCreation = async (packageId) => {
     await wait(500);
 
     // Request Viewing Package Creator state from PrizmDoc Server.
-    const stateResponse = await fetch(`/v3/viewingPackageCreators/${processId}`, { // See https://help.accusoft.com/PrizmDoc/preview/HTML/v3-viewing-package-creators.html#get-v3viewingpackagecreatorsprocessid
+    const stateResponse = await fetch(`/v3/viewingPackageCreators/${processId}`, { // See https://help.accusoft.com/PrizmDoc/latest/HTML/v3-viewing-package-creators.html#get-v3viewingpackagecreatorsprocessid
       method: 'GET',
       headers: extendWithAffinity({}, affinityToken)
     });

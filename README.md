@@ -30,7 +30,7 @@ Alternately, you can set or override this value via the environment variable
 
 _**IMPORTANT:** Make sure your self-hosted PrizmDoc Server version is 13.18 or
 higher and the "v3" Viewing Packages feature is enabled.
-See [the product documentation](https://help.accusoft.com/PrizmDoc/preview/HTML/integration-with-pdf-viewer.html)
+See [the product documentation](https://help.accusoft.com/PrizmDoc/latest/HTML/integration-with-pdf-viewer.html)
 for information about configuring PrizmDoc Server._
 
 ### (Optional) Configure Viewing Package Id Salt
