@@ -9,7 +9,7 @@ PrizmDoc Viewer.
 
 ### Requirements
 
-- [Node.js](https://nodejs.org) 12 or higher
+- [Node.js](https://nodejs.org) 14 or higher
 
 ### Configure Connection to PrizmDoc Server
 
@@ -28,7 +28,7 @@ For a self-hosted PrizmDoc Server:
 Alternately, you can set or override this value via the environment variable
 `PRIZMDOC_SERVER_URL`.
 
-_**IMPORTANT:** Make sure your self-hosted PrizmDoc Server version is 13.18 or
+_**IMPORTANT:** Make sure your self-hosted PrizmDoc Server version is 13.20 or
 higher and the "v3" Viewing Packages feature is enabled.
 See [the product documentation](https://help.accusoft.com/PrizmDoc/latest/HTML/integration-with-pdf-viewer.html)
 for information about configuring PrizmDoc Server._

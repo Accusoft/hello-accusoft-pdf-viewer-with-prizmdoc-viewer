@@ -17,11 +17,14 @@ class PdfViewer extends React.Component {
   }
 
   async componentDidMount() {
-    const { sourceDocument } = this.props;
+    const { viewingSessionId, imageHandlerUrl } = this.props;
 
     // Create the PDF Viewer
     await PdfViewerControl.create({
-      sourceDocument: sourceDocument,
+      sourceDocument: {
+        documentId: viewingSessionId,
+        imageHandlerUrl
+      },
       container: this.viewerContainerRef.current
     });
   }

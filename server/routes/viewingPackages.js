@@ -123,23 +123,6 @@ router.get('/viewingPackages/:document', async (req, res, next) => {
   }
 });
 
-// This route will be called by the client whenever it needs to view a document.
-// This route will contact PrizmDoc Server to receive PDF content of Viewing Package.
-router.get('/viewingPackages/:document/content/pdf', async (req, res, next) => {
-  try {
-    const packageId = getPackageIdForDocument(req.params.document);
-    const contentResponse = await fetch(`/v3/viewingPackages/${packageId}/content/pdf`); // See https://help.accusoft.com/PrizmDoc/latest/HTML/v3-viewing-packages.html#get-v3viewingpackagespackageidcontentpdf
-    if (contentResponse.status === 200) {
-      res.set('content-type', 'application/pdf');
-      contentResponse.body.pipe(res);
-    } else {
-      throw new Error(`Not expected response when trying to download viewing package content: HTTP ${contentResponse.status}`);
-    }
-  } catch (err) {
-    next(err);
-  }
-});
-
 // This function repeatedly requests Viewing Package Creator state
 // until it is complete and updates Viewing Package creation status
 // in the application.
