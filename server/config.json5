@@ -1,5 +1,10 @@
 {
+  // ========== PrizmDoc Cloud ==========
+  "prizmDocServerUrl": "https://api.accusoft.com",
+  "apiKey": "YOUR_API_KEY", // Get an API key for free at https://cloud.accusoft.com
+
   // ========== Self-hosted PrizmDoc Server ==========
-  "prizmDocServerUrl": "http://localhost:18681",
-  //"packageIdSalt": "YOUR_UNIQUE_SALT"
+  // "prizmDocServerUrl": "http://localhost:18681",
+
+  // "packageIdSalt": "YOUR_UNIQUE_SALT
 }

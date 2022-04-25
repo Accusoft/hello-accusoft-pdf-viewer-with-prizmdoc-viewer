@@ -1,6 +1,6 @@
 # Hello Accusoft PDF Viewer with PrizmDoc Viewer
 
-A minimal example of a [React app](https://github.com/facebook/create-react-app)
+A minimal example of a [React App](https://github.com/facebook/create-react-app)
 which integrates the
 [Accusoft PDF Viewer](https://www.npmjs.com/package/@accusoft/pdf-viewer) with
 PrizmDoc Viewer.
@@ -17,6 +17,21 @@ Configure the example application server's connection to PrizmDoc Server by
 editing the [server/config.json5](./server/config.json5) file
 (this is just a JSON file with comments).
 
+If you're just getting started, the easiest thing to do is to use
+[PrizmDoc Cloud](https://cloud.accusoft.com). We host PrizmDoc Server for you
+and all you need is your [PrizmDoc Cloud](https://cloud.accusoft.com) API key.
+If you don't have an API key, you can get one for free at
+<https://cloud.accusoft.com>.
+
+For PrizmDoc Cloud:
+
+```json
+{
+  "prizmDocServerUrl": "https://api.accusoft.com",
+  "apiKey": "YOUR_API_KEY"
+}
+```
+
 For a self-hosted PrizmDoc Server:
 
 ```json
@@ -25,8 +40,10 @@ For a self-hosted PrizmDoc Server:
 }
 ```
 
-Alternately, you can set or override this value via the environment variable
-`PRIZMDOC_SERVER_URL`.
+Alternately, you can set or override any of these values via environment variables:
+
+- `API_KEY`
+- `PRIZMDOC_SERVER_URL`
 
 _**IMPORTANT:** Make sure your self-hosted PrizmDoc Server version is 13.20 or
 higher and the "v3" Viewing Packages feature is enabled.
@@ -78,7 +95,7 @@ Application running at http://localhost:8888
 When you open `http://localhost:8888` in a browser, you
 should see a home page with a list of example documents, like this:
 
-![Sample screenshot](screenshot.png)
+![screenshot](screenshot.png)
 
 Next, you can create a Viewing Package for any document in the list and then
 open it in the Accusoft PDF Viewer.
